@@ -1,0 +1,16 @@
+
+
+// Combinación de todos mis reducers.
+// Vamos a tener 3: authenticación, calendario y uno del ui.
+
+import { combineReducers } from "redux";
+import { authReducer } from "./authReducer";
+import { calendarReducer } from "./calendarReducer";
+import { uiReducer } from "./uiReducer";
+
+export const rootReducer = combineReducers({
+    ui: uiReducer,
+    calendar: calendarReducer,
+    auth: authReducer
+    // TODO: CalendarReducer
+})
